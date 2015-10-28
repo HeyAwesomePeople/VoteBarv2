@@ -30,6 +30,8 @@ public class VoteBar extends JavaPlugin {
         dataC = data.getCustomConfig();
         getServer().getPluginManager().registerEvents(new Listener(), this);
 
+        getCommand("votebar").setExecutor(new Commands());
+
         makeConfig();
 
         if (Bukkit.getPluginManager().isPluginEnabled("MVdWPlaceholderAPI")) {
